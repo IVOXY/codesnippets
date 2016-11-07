@@ -1,8 +1,12 @@
-﻿#Build Performance Script
+﻿#Build Performance VMs
+
+
+
 
 $viserver = "seadc1vc01.ldthost.pvt"
 connect-viserver -server $viserver
 
+#Global Variables
 $TemplateName = "SEADC1-W2012R2"
 $VMs = @("seadc1-ivoxytest1","seadc1-ivoxytest2","seadc1-ivoxytest3","seadc1-ivoxytest4")
 $Custom = "IVOXY-Win-DHCP"
