@@ -10,7 +10,8 @@ $Portgroup = "VLAN48-ESXi-MGMT"
 $dvswitch = "DSwitche0"
 $folder = "Discovered Virtual Machine"
 $datastore = "POC-SEADC1VC01CLST1-AF"
-$ResourcePool = get-cluster -name "cluster1" | Get-ResourcePool
+$cluster = "Cluster1" 
+$ResourcePool = get-cluster -name $Cluster | Get-ResourcePool
 
 
 
@@ -35,10 +36,12 @@ foreach ($VM in $VMs) {
     New-ScsiController -Type ParaVirtual -Harddisk $disks
 
     get-vm -name $VM | set-vm -numcpu 4 -MemoryGB 8 
+    get-vm -name $VM | start-vm 
 
 
 }
 
+New-DrsRule -Name "IVOXYPerf" -cluster $Cluster -KeepTogether 0 -VM $VMs
 
 
 
