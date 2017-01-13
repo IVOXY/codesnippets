@@ -3,23 +3,29 @@
 		"DNS01": "10.0.1.25",
 		"DNS02": "10.0.1.26",
 		"NTP": "time.google.com",
-		"vCenterUser": "ccrow",
-		"vCenterPassword": "********",
+		"vCenterUser": "svcacct",
+		"vCenterPassword": "Clab4911!",
 		"Datacenter": "Tacoma",
-		"Cluster": "VIOLab",
+		"Cluster": "VIOMGMT",
 		"ESXRootPass": "Clab4911!",
 		"syslogserver": "vrli.lab.local",
 		"nsxserver": "10.0.1.52",
 		"nsxusername": "admin",
 		"nsxpassword": "Clab4911!",
 		"vtepvlan": "16",
-		"vtepippool": "VTEP Addresses"
+		"vtepippool": "VTEP Addresses",
+		"transzone": "TAC"
 	},
 	"dvSwitch": {
 		"name": "dswitch0",
 		"uplink1": "vmnic2",
 		"uplink2": "vmnic3"
 	},
+	"dvswitch-vio": {
+		"name": "dswitch1-vio",
+		"uplink1": "vmnic4",
+		"uplink2": "vmnic5"
+	}, 
 	"datastores": [
 			{
 			"name": "esx01",
@@ -44,39 +50,58 @@
 		],
 	"hosts": [
 			{
-			"hostname": "LabESX01.lab.local",
+			"hostname": "LabESX03.lab.local",
 			"vmk1": {
-				"IP": "10.0.5.131",
+				"IP": "10.0.5.133",
 				"netmask": "255.255.255.0",
 				"portgroup": "VLAN5-vMotion",
 				"vmotion": true
 			},	
 			"vmk2": {
-				"IP": "10.0.6.131",
+				"IP": "10.0.6.133",
 				"netmask": "255.255.255.0",
 				"portgroup": "VLAN6-Storage1"
 			},
 			"vmk3": {
-				"IP": "10.0.7.131",
+				"IP": "10.0.7.133",
 				"netmask": "255.255.255.0",
 				"portgroup": "VLAN7-Storage2"	
 			}
 		},
 					{
-			"hostname": "LabESX02.lab.local",
+			"hostname": "LabESX04.lab.local",
 			"vmk1": {
-				"IP": "10.0.5.132",
+				"IP": "10.0.5.134",
 				"netmask": "255.255.255.0",
 				"portgroup": "VLAN5-vMotion",
 				"vmotion": true
 			},	
 			"vmk2": {
-				"IP": "10.0.6.132",
+				"IP": "10.0.6.134",
 				"netmask": "255.255.255.0",
 				"portgroup": "VLAN6-Storage1"
 			},
 			"vmk3": {
-				"IP": "10.0.7.132",
+				"IP": "10.0.7.134",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN7-Storage2"	
+			}
+		},
+			{
+			"hostname": "LabESX05.lab.local",
+			"vmk1": {
+				"IP": "10.0.5.135",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN5-vMotion",
+				"vmotion": true
+			},	
+			"vmk2": {
+				"IP": "10.0.6.135",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN6-Storage1"
+			},
+			"vmk3": {
+				"IP": "10.0.7.135",
 				"netmask": "255.255.255.0",
 				"portgroup": "VLAN7-Storage2"	
 			}
