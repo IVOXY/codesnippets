@@ -8,7 +8,12 @@
 		"Datacenter": "Tacoma",
 		"Cluster": "VIOLab",
 		"ESXRootPass": "Clab4911!",
-		"syslogserver": "vrli.lab.local"
+		"syslogserver": "vrli.lab.local",
+		"nsxserver": "10.0.1.52",
+		"nsxusername": "admin",
+		"nsxpassword": "Clab4911!",
+		"vtepvlan": "16",
+		"vtepippool": "VTEP Addresses"
 	},
 	"dvSwitch": {
 		"name": "dswitch0",
