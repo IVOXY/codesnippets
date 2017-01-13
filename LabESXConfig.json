@@ -73,7 +73,7 @@
 			"vmk3": {
 				"IP": "10.0.7.132",
 				"netmask": "255.255.255.0",
-				"portgroup": "VLAN7-vMotion"	
+				"portgroup": "VLAN7-Storage2"	
 			}
 		}
 	]
