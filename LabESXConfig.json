@@ -1,0 +1,83 @@
+{
+	"Global": {
+		"DNS01": "10.0.1.25",
+		"DNS02": "10.0.1.26",
+		"NTP": "time.google.com",
+		"vCenterUser": "ccrow",
+		"vCenterPassword": "bd2NP3xQ",
+		"Datacenter": "Tacoma",
+		"Cluster": "VIOLab",
+		"ESXRootPass": "Clab4911!",
+		"syslogserver": "vrli.lab.local"
+	},
+	"dvSwitch": {
+		"name": "dswitch0",
+		"uplink1": "vmnic2",
+		"uplink2": "vmnic3"
+	},
+	"datastores": [
+			{
+			"name": "esx01",
+			"serverip": "10.0.6.8",
+			"export": "/volume1/esx01"
+			},
+			{
+			"name": "esx02",
+			"serverip": "10.0.7.8",
+			"export": "/volume1/esx02"
+			},
+			{
+			"name": "esx03",
+			"serverip": "10.0.6.8",
+			"export": "/volume2/esx03"
+			},
+			{
+			"name": "esx04",
+			"serverip": "10.0.7.8",
+			"export": "/volume2/esx04"
+			}
+		],
+	"hosts": [
+			{
+			"hostname": "LabESX01.lab.local",
+			"vmk1": {
+				"IP": "10.0.5.131",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN5-vMotion",
+				"vmotion": true
+			},	
+			"vmk2": {
+				"IP": "10.0.6.131",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN6-Storage1"
+			},
+			"vmk3": {
+				"IP": "10.0.7.131",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN7-Storage2"	
+			}
+		},
+					{
+			"hostname": "LabESX02.lab.local",
+			"vmk1": {
+				"IP": "10.0.5.132",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN5-vMotion",
+				"vmotion": true
+			},	
+			"vmk2": {
+				"IP": "10.0.6.132",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN6-Storage1"
+			},
+			"vmk3": {
+				"IP": "10.0.7.132",
+				"netmask": "255.255.255.0",
+				"portgroup": "VLAN7-vMotion"	
+			}
+		}
+	]
+}	
+			
+				
+		
