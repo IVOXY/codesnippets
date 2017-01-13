@@ -4,7 +4,7 @@
 		"DNS02": "10.0.1.26",
 		"NTP": "time.google.com",
 		"vCenterUser": "ccrow",
-		"vCenterPassword": "bd2NP3xQ",
+		"vCenterPassword": "********",
 		"Datacenter": "Tacoma",
 		"Cluster": "VIOLab",
 		"ESXRootPass": "Clab4911!",
